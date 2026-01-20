@@ -82,7 +82,7 @@ jobs:
               --bucket "${S3_BUCKET}" \
               --ownership-controls 'Rules=[{ObjectOwnership=BucketOwnerPreferred}]' \
               --no-cli-pager
-            echo "Bucket public access and ownership controls configured okay."
+            echo "Bucket public access and ownership controls configured."
       - aws-s3/copy:
           from: data/crypto.md
           to: s3://${S3_BUCKET}/crypto.md
